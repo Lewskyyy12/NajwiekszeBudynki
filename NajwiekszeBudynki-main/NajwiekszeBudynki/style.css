@@ -1,0 +1,91 @@
+body {
+    background-color: #75a9c4;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    height: 100px;
+  
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #caedfe;
+    padding-inline: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+   
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;
+}
+
+nav{
+    display: flex;
+    height: 100px;
+
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 3px;  
+}
+
+
+.menu{
+    display: flex;
+    width: 300px;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    background-color:  #a3aaad;
+    border-radius: 10px;
+    text-decoration: none;
+   
+}
+
+.main{
+    margin-right: 5px;
+    MARGIN-LEFT: 10%;
+}
+
+article{
+    display: flex;
+}
+   
+
+.sidemenu{
+    position: fixed;
+    width: 9%;
+}
+
+.sidemenulist{
+    display: block;
+    height: 50px;
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    margin-bottom: 5px;
+}
+
+.rank{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+
+}
+
+.photo{
+    width: 600PX;
+    height: 800PX;
+}
