@@ -168,6 +168,12 @@ td{
 .Wietnam{
     background-image: url("../NajwiekszeBudynki/obrazy/w80/vn.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;  
+}
+
+.tekst{
+    color:#5B94FC;
+    font-size: 35px;
+    font-family: Monserat, sans-serif;
+    font-style: bold;
 }
