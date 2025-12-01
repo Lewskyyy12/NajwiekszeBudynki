@@ -1,89 +1,134 @@
 <!doctype html>
 <html>
-     <head>
-          <meta charset="UTF-8" />
-          <meta name="description" content="Projekt 1">
-          <meta name="keywords" content="HTML5, CSS3, JavaScript">
-          <meta name="author" content="Dawid Lewandowski">
-          <title>Najwyższe budynki świata</title>
-          <link rel="stylesheet" href="../style.css">
-          <link rel="shortcut icon" href="../obrazy/icon.png">
-          
-     </head>
-     <body>
-          <header>
-              Najwyższe budynki świata
-              <img src="../obrazy/buildings_100px.png" />
-          </header>
-          <nav>
-               <a href="Top10.html" class ="menu">Top10</a>
-               <a href="Statystyki.html" class ="menu">Statystyki</a>
-               <a href="Startowa.html" class ="menu">Nowości</a>
-               <a href="https://www.wp.pl/" class ="menu">O nas</a>
-               <a href="zglos_nowy.html" class ="menu">Zgłoś nowy</a>
-          </nav>
-          <section>
-               <article>
-                    <div>
-                    <p class="tekst">Posiadasz informacje o jakimś wysokim budynku, którego nie ma na naszej stronie? <br/>
-                    Chcesz się podzielić swoją wiedzą z innymi? Wypełnij poniższy formularz!</p>
-                    <form>
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="description" content="Projekt 1">
+     <meta name="keywords" content="HTML5, CSS3, JavaScript">
+     <meta name="author" content="Dawid Lewandowski">
+     <title>Najwyższe budynki świata</title>
+     <link rel="stylesheet" href="../style.css">
+     <link rel="shortcut icon" href="../obrazy/icon.png">
+
+</head>
+
+<body>
+     <header>
+          Najwyższe budynki świata
+          <div class="zegarek" id="zegarek">Zegarek</div>
+          <img src="../obrazy/buildings_100px.png" />
+     </header>
+     <nav>
+          <a href="Top10.html" class="menu">Top10</a>
+          <a href="Statystyki.html" class="menu">Statystyki</a>
+          <a href="Startowa.html" class="menu">Nowości</a>
+          <a href="architekci.html" class="menu">Biura i architekci</a>
+          <a href="zglos_nowy.html" class="menu">Zgłoś nowy</a>
+     </nav>
+     <section>
+          <article>
+               <div class="DoForm">
+                    <p class="tekst">Posiadasz informacje o jakimś wysokim budynku, którego nie ma na naszej stronie?
+                         <br />
+                         Chcesz się podzielić swoją wiedzą z innymi? Wypełnij poniższy formularz!</p>
+                    <form name="fm" class="fm">
+                         <h2>Dane budynku</h2>
                          <div>
-                         <label for="nazwa">Nazwa budynku</label>
-                         <input type="text" id="nazwa" placeholder="Nazwa budynku"/><br/>
-                         <label for="panstwo">Państwo</label>
-                         <input type="text" id="panstwo"/><br/>
-                         <label for="miasto">Miasto</label>
-                         <input type="text" id="miasto"/><br/>
-                         <label for="wysokosc">Wysokosc</label>
-                         <input type="number" id="wysokosc" placeholder="Wysokość (m)"/><br/>
-                         <label for="lpieter">Ilosc pieter</label>
-                         <input type="number" id="lpieter" placeholder="Liczba pięter"/><br/>
-                         <label for="rok">Rok ukończenia </label>
-                         <input type="date" id="rok" /><br/>
-                         Czy wysłać potwierdzenie na email?
-                         <lavel for="czytak">Tak</label>
-                         <input type="radio" name="wybor" id="czytak" />
-                         <label for="czynie">Nie</label>
-                         <input type="radio" name="wybor" value="czynie" />
-                         <br/>
-                         <label for="emaili">Email</label>
-                         <input type="email" id="emaili" placeholder="np. janek123@wp.pl"/><br/>
-                         <label for="telefon">telefon</label>
-                         <input type="tel" id="telefon"/><br/>
+                              <div>
+                                   <div class="form-group">
+                                        <label for="nazwa">Nazwa budynku</label>
+                                        <input type="text" id="nazwa" placeholder="Nazwa budynku" name="Nazwa budynku" >
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="panstwo">Państwo</label>
+                                        <input type="text" id="panstwo" name="Państwo" >
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="miasto">Miasto</label>
+                                        <input type="text" id="miasto" name="Miasto" >
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="wysokosc">Wysokość (m)</label>
+                                        <input type="number" id="wysokosc" name="Wysokość" >
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="lpieter">Liczba pięter</label>
+                                        <input type="number" id="lpieter" name="Liczba pięter" >
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="rok">Rok ukończenia</label>
+                                        <input type="date" id="rok" name="Rok ukończenia" >
+                                        <div class="error"> </div>
+                                   </div>
+                              </div>
                          </div>
+
+                         <h3>Przeznaczenie obiektu</h3>
                          <div>
-                         <textarea name="komentarz" id="wybierz" cols="30" rows="10" placeholder="Wpisz Opis"></textarea><br/>
+                              <input type="checkbox" name="opcja1" value="Biura" />Biura
+                              <input type="checkbox" name="opcja2" value="Apartamenty" />Apartamenty
+                              <input type="checkbox" name="opcja3" value="Handel" />Hotele
+                              <input type="checkbox" name="opcja4" value="Handel i usługi" />Handel i usługi
+                              <input type="checkbox" name="opcja5" value="Rekreacja" />Rekreacja i fitness
+                              <input type="checkbox" name="opcja6" value="Inne" />Inne
                          </div>
-                         Czy obiekt posiada przestrzeń przenaczoną na:<br/>
-                         <input type="checkbox" name="opcja1" value="opcja1"/>Biura
-                         <input type="checkbox" name="opcja2" value="opcja2"/>Apartamenty
-                         <input type="checkbox" name="opcja3" value="opcja3"/>Hotele
-                         <input type="checkbox" name="opcja4" value="opcja4"/>Handel i usługi
-                         <input type="checkbox" name="opcja5" value="opcja5"/>Rekreacja i fitness
-                         <input type="checkbox" name="opcja6" value="opcja6"/>Inne
-                         <br/>
-                         <select name="wybierz" id="">
-                              <option disabled selected >Jak się o nim dowiedziałeś</option>
-                              <option value="Mieszkam">Mieszkam niedaleko</option>
-                              <option value="Internet">Wpisy internetowe</option>
-                              <option value="Znajomi">Opowiesci znajomych</option>
-                              <option value="Inne">Inne</option>
-                         </select>
-                           <label for="zakres" > Ocena budynku</label>
-                            <input type="range" id="zakres" min="0" max="100" value="50"><br/>
-                           Posiadasz zdjęcie ?  <input type="file" ><br/>
-                         <input type="submit" value="przeslij" />
-                         <input type="reset" value="reset" />
-                    </div>
+                         <h3>Wysłać potwierdzenie?</h3>
+                         <div>
+                              <label for="czytak">Tak</label>
+                              <input type="radio" name="Potwierdzenie_odbioru" id=wyslac value="Wysyłać" />
+                              <label for="czynie">Nie</label>
+                              <input type="radio" name="Potwierdzenie_odbioru" value="Nie wysłać" />
+                                   <div class="form-group" >
+                                        <label for="email">Email</label>
+                                        <input type="text" id="email" placeholder="np. janek123@wp.pl"  name="email"/>
+                                        <div class="error"> </div>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="telefon">telefon</label>
+                                        <input type="tel" id="telefon" name="Telefon"/>
+                                        <div class="error"> </div>
+                                   </div>
+                         </div>
+                         <h3>Dodatkowe informacje</h3>
+                         <div>
+                              <div>
+                                   <select name="Skad_informacja" id="">
+                                        <option disabled selected>Jak się o nim dowiedziałeś</option>
+                                        <option value="Mieszkam">Mieszkam niedaleko</option>
+                                        <option value="Internet">Wpisy internetowe</option>
+                                        <option value="Znajomi">Opowiesci znajomych</option>
+                                        <option value="Inne">Inne</option>
+                                   </select>
+                              </div>
+                              <div> 
+                                   <textarea name="komentarz" id="wybierz" cols="80" rows="10" placeholder="Wpisz Opis"></textarea>
+                              </div>
+                              <div class="form-group">
+                                   <label for="zakres"> Ocena budynku</label>
+                                   <input type="range" id="zakres" min="0" max="100" value="50" name="Ocena budynku">
+                              </div>
+                              <div class="form-group">
+                                   Posiadasz zdjęcie ? <input type="file">
+                              </div>
+                         </div>
+                         <div class="formButt">
+                              <input class ="Przycisk" type="submit" value="przeslij" />
+                              <input class ="Przycisk" type="reset" value="reset" />
+                         </div>
                     </form>
-               </article>
-          </section>
-          <aside>
-               Kolumna boczna
-          </aside>
-          <footer>
-               Stopka
-          </footer>
-     </body>
+               </div>
+          </article>
+     </section>
+     <footer>
+          <a>Projekt MPA Dawid Lewandowski </a>
+     </footer>
+     <script src ="../js/wymaganie_email.js"></script>
+     <script src ="../js/zmiana_czasu.js"></script>
+</body>
+
 </html>
